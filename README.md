@@ -62,12 +62,15 @@ developing your own process.
 
 - Add a new toy when the toy form is submitted
 
-  - How I debugged:
+  - How I debugged: 
+  - I put a byebug inside to make sure we had a connection between the frontend and backend. All seemed to look good so I look at the actual code and noticed the s on Toy.
 
 - Update the number of likes for a toy
 
   - How I debugged:
+  - When sending a like through I noticed that the :id wasn't being permit in toy_params so I switched that out
 
 - Donate a toy to Goodwill (and delete it from our database)
 
   - How I debugged:
+  - When trying to delete a toy I saw that there wasn't a route match for destroy, so I went and checked out the routes and noticed there was no destroy, so I fixed that.
